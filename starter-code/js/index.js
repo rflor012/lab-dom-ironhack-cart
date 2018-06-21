@@ -38,15 +38,34 @@ function createNewItem(){
 
 }
 
+var calculatePriceButton = document.getElementById('calc-prices-button');
+var createItemButton = document.getElementById('new-item-create');
+var deleteButtons = document.getElementsByClassName('btn-delete');
+
 window.onload = function(){
-  var calculatePriceButton = document.getElementById('calc-prices-button');
-  var createItemButton = document.getElementById('new-item-create');
-  var deleteButtons = document.getElementsByClassName('btn-delete');
 
-  calculatePriceButton.onclick = getTotalPrice;
-  createItemButton.onclick = createNewItem;
+  var cost = document.getElementsByClassName("shopping-price");
+  var theCost = amount.value;
 
-  for(var i = 0; i<deleteButtons.length ; i++){
-    deleteButtons[i].onclick = deleteItem;
-  }
+
+  var amount = document.getElementById("quantity");
+  var theAmount = amount.value;
+
+  var price = document.getElementById("total");
+  var thePrice = price.value;
+
+  calculatePriceButton.onclick = function(thePrice){
+    console.log(theCost);
+  };
+
+
+
 };
+
+
+
+  /*createItemButton.onclick = createNewItem; */
+
+  // for(var i = 0; i< deleteButtons.length ; i++){
+  //   deleteButtons[i].onclick = deleteItem;
+  // }
